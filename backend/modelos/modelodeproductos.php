@@ -24,5 +24,18 @@ function get_producto($id)
     return $conexion->query($query)->fetch_all(MYSQLI_ASSOC);
 }
 
+function insert_producto($id)
+{
+    $nombre_producto = $_POST['nombre_producto'];
+    $descripcion_producto = $_POST['descripcion_producto'];
+    $precio_producto = $_POST['precio_producto'];
+    $stock_producto = $_POST['stock_producto'];
+    $imagen_producto = $_POST['imagen_producto'];
+
+    $query = "INSERT INTO productos(nombre, descripcion, precio, stock, imagen)VALUES ('$nombre_producto', '$descripcion_producto', '$precio_producto', '$stock_producto', '$imagen_producto')";
+    $conexion = conectame();
+    return $conexion->query($query)->fetch_all(MYSQLI_ASSOC);
+}
+
 
 
