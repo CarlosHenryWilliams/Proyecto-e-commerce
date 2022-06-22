@@ -23,3 +23,6 @@ function get_producto($id)
     $conexion = conectame();
     return $conexion->query($query)->fetch_all(MYSQLI_ASSOC);
 }
+
+
+
