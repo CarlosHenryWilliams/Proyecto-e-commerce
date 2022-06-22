@@ -9,16 +9,17 @@ Pertenecer a una o más categorías.
 Tener por lo menos una imagen. -->
 <?php
 /**
- * TRAER TODOS LOS PRODUCTOS DE LA BASE DE DATOS
+ * OBTIENE UN PRODUCTO DE LA BASE DE DATOS SEGUN SU ID.
  * int $id
  */
 include 'conexion.php';
-$id = 1;
+
 function get_producto($id)
 {
 
     $query = "SELECT * FROM `productos` INNER JOIN categoriasproductos ON productos.id = categoriasproductos.id_producto
         INNER JOIN categorias ON categorias.id = categoriasproductos.id_categoria WHERE categoriasproductos.id_producto=$id";
-    return conectame()->$query;
+
+    $conexion = conectame();
+    return $conexion->query($query)->fetch_all(MYSQLI_ASSOC);
 }
-get_producto($id);
