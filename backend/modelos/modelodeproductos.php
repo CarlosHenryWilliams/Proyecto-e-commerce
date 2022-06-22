@@ -12,10 +12,10 @@ Tener por lo menos una imagen. -->
  * TRAER TODOS LOS PRODUCTOS DE LA BASE DE DATOS
  * int $id
  */
-include 'conexion/php';
+include 'conexion.php';
 function get_producto($id)
 {
-    $query = "SELECT * FROM productos WHERE id=$id";
+    $query = "SELECT *  FROM productos WHERE id=$id";
     return conectame()->$query;
 }
 get_producto(2);
