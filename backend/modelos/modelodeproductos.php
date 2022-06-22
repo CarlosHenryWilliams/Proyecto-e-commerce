@@ -13,9 +13,12 @@ Tener por lo menos una imagen. -->
  * int $id
  */
 include 'conexion.php';
+$id = 1;
 function get_producto($id)
 {
-    $query = "SELECT *  FROM productos WHERE id=$id";
+
+    $query = "SELECT * FROM `productos` INNER JOIN categoriasproductos ON productos.id = categoriasproductos.id_producto
+        INNER JOIN categorias ON categorias.id = categoriasproductos.id_categoria WHERE categoriasproductos.id_producto=$id";
     return conectame()->$query;
 }
-get_producto(2);
+get_producto($id);
