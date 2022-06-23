@@ -58,6 +58,9 @@ function insert_producto()
 }
 
 
+/**
+ * Actualiza los datos de un producto.
+ */
 function update_producto()
 {
 
@@ -72,19 +75,4 @@ function update_producto()
     $query = conectame()->query("UPDATE productos SET nombre='$nombre_producto', descripcion='$descripcion_producto', precio ='$precio_producto', stock_producto='$stock_producto',imagen='$imagen_producto' WHERE id=$id_producto");
 
     $query2 = conectame()->query("UPDATE categoriasproductos SET id_categoria = $categoria_producto WHERE id_producto = $id_producto");
-    /* una vez que inserta los datos recibidos, obtiene el id del producto y lo inserta en la tabla categoriasprocucto para que coincidan unos con otros */
-
-    /*llama a el id del producto insertado*/
-    $consulta1 = "SELECT id FROM productos order by 1 desc LIMIT 1";
-    $resultado1 = mysqli_query(conectame(), $consulta1);
-    if (mysqli_num_rows($resultado1) == 1) {
-
-        $row = mysqli_fetch_array($resultado1);
-        $id_producto = $row['id'];
-    }
-
-    //le doy un id_producto a la tabla
-    $query5 = conectame()->query("INSERT INTO categoriasproductos(id_producto)VALUES('$id_producto')");
-    /*agrega id_categoria a el nuevo producto*/
-    $query6 = conectame()->query("UPDATE categoriasproductos SET id_categoria = $categoria_producto WHERE id_producto = $id_producto");
 }
