@@ -76,3 +76,11 @@ function update_producto()
 
     $query2 = conectame()->query("UPDATE categoriasproductos SET id_categoria = $categoria_producto WHERE id_producto = $id_producto");
 }
+
+function delete_producto()
+{
+    $id_producto = $_GET['id'];
+    $query = conectame()->query("DELETE productos WHERE id = $id_producto");
+    $query = conectame()->query("DELETE categoriasproductos WHERE id_producto = $id_producto");
+
+}
