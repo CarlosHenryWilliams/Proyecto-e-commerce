@@ -40,7 +40,7 @@ function insert_producto($id)
  
     /*llama a el id del producto insertado*/ 
     $consulta1 = "SELECT id FROM productos order by 1 desc LIMIT 1"; 
-    $resultado1 = mysqli_query(conectame(), $consulta1); 
+    $resultado1 = mysqli_query(conectame(), $consulta1);
     if (mysqli_num_rows($resultado1) == 1) { 
  
         $row = mysqli_fetch_array($resultado1); 
