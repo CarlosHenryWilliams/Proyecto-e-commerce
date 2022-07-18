@@ -12,7 +12,7 @@ Tener por lo menos una imagen. -->
  * OBTIENE UN PRODUCTO DE LA BASE DE DATOS SEGUN SU ID.
  * int $id
  */
-include 'conexion.php';
+include('../../modulos/conexion.php');
 
 function get_producto($id)
 {
@@ -82,5 +82,4 @@ function delete_producto()
     $id_producto = $_GET['id'];
     $query = conectame()->query("DELETE productos WHERE id = $id_producto");
     $query = conectame()->query("DELETE categoriasproductos WHERE id_producto = $id_producto");
-
 }

@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('../../modulos/conexion.php');
 
 function get_categorias()
 {
