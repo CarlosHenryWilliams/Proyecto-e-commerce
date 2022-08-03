@@ -40,10 +40,18 @@ function insert_categoria()
     $query = conectame()->query("INSERT INTO categorias(nombre)VALUES ('$nombre_categoria )");
 }
 
+/**
+ * ELIMINA UNA CATEGORIA 
+ */
+
 function delete_categoria($id)
 {
     $query = conectame()->query("DELETE categorias FROM categorias WHERE id=$id");
 }
+
+/**
+ * EDITA UNA CATEGORIA 
+ */
 
 function edit_categoria($id)
 {
