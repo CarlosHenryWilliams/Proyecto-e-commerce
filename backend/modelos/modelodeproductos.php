@@ -83,3 +83,12 @@ function delete_producto()
     $query = conectame()->query("DELETE productos WHERE id = $id_producto");
     $query = conectame()->query("DELETE categoriasproductos WHERE id_producto = $id_producto");
 }
+
+/**
+ * Elimina la categoria de un producto en especifico.
+ */
+function delete_categoria_producto()
+{
+    $id_producto = $_GET['id'];
+    $query = conectame()->query("DELETE categoriasproductos WHERE id_producto = $id_producto");
+}
