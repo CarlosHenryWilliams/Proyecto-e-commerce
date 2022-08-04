@@ -7,5 +7,5 @@ include('../modelos/modelodecategoria.php');
  */
 $id = $_GET['id'];
 
-delete_categoria($id);
-insert_categoria();
+delete_producto($id);
+insert_producto();
