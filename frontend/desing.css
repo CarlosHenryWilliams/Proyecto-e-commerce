@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#body{
+    margin-top: 20px;
+}
+.img_chica{
+    display: flex;
+    flex-direction: column;
+    
+}
+.img_costado{
+    margin-bottom: 5px;
+    max-width: 70px;
+}
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+.titulo_letra{
+    font-size: 30px;
+}
+.descripcion{
+    font-size: 20px;
+}
+.precio{
+    font-size: 40px;
+}
+.comprar{
+    background-color: #a5d6a7;
+    font-size: 20px;
+    font-weight: 400;
+}
+.talle_cantidad{
+    display: flex;
+    align-items: center;
+}
+.mas{
+    border: 1px solid rgb(189, 188, 188);
+    height: 35px;
+    background-color: #ddffde;
+}
+.menos{
+    border: 1px solid rgb(189, 188, 188);
+    height: 35px;
+    background-color: #ddffde;
+}
+.inp{
+    border: 1px solid rgb(189, 188, 188);
+    height: 35px;
+}
+.cantidad{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+}
+.contenedor{
+    border: 2px solid #ddd;
+}
+hr{
+    background-color: #ddffde;
+}
+.nombre_oculto{
+    display: none;
+}
+.img_chica_oculta{
+    display: none;
+}
+select{
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.borde{
+    border-radius: 5px;
+}
+@media screen and (max-width: 992px) {
+
+    .img_chica{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img_costado{
+        margin: 0 5px;
+    }
+    .img a{
+        width: 20px;
+    }
+    .nombre_oculto{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nombre{
+        display: none;
+    }
+    .img_chica_oculta{
+        display: block;
+    }
+    .img_chica{
+        display: none;
+    }
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+
+}
+ 
+}
