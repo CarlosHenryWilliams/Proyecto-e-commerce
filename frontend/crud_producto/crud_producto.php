@@ -25,10 +25,6 @@
     color: black;
   }
 
-  /* table {
-    color: pink;
-  } */
-
 </style>
 
 <body>
